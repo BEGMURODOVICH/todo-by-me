@@ -9,6 +9,7 @@
 
 @media only screen and (max-width: 480px) {
   .container {
+    max-width: 480px;
     width: 100%;
     margin: 0 auto;
     padding: 0 35px;
@@ -84,7 +85,7 @@
     }
   }
   footer {
-    // position: fixed;
+    position: fixed;
     z-index: 100;
     bottom: 0;
     right: 0;
