@@ -1,18 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Russo+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Russo+One&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Russo One;
 }
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
 
 @media (max-width: 360px) {
   .container {
-    max-width: 360px;
+    max-width: 36px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 15px;
   }
   header {
     margin-bottom: 200px;
@@ -83,6 +90,40 @@
         }
       }
     }
+    .note-section {
+      margin-top: 30px;
+      .note-content {
+        li {
+          border-radius: 8px;
+          padding: 8px 5px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border: 2px solid #1e90ff;
+          p {
+            font-family: Roboto;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 21.78px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            color: #0d0d0d;
+          }
+          .action {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            .chexbox {
+              width: 24px;
+              height: 24px;
+              border-radius: 50%;
+              border: 2px solid #20eeb0;
+            }
+          }
+        }
+      }
+    }
   }
   footer {
     position: fixed;
@@ -121,7 +162,7 @@
     max-width: 425px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 35px;
+    padding: 0 15px;
   }
   header {
     margin-bottom: 200px;
@@ -188,6 +229,42 @@
           img {
             width: 30px;
             height: auto;
+          }
+        }
+      }
+    }
+    .note-section {
+      margin-top: 30px;
+      .note-content {
+        display: grid;
+        gap: 15px;
+        li {
+          border-radius: 8px;
+          padding: 8px 5px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border: 2px solid #1e90ff;
+          p {
+            font-family: Roboto;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 21.78px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            color: #0d0d0d;
+          }
+          .action {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            .chexbox {
+              width: 24px;
+              height: 24px;
+              border-radius: 50%;
+              border: 2px solid #20eeb0;
+            }
           }
         }
       }
