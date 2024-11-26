@@ -72,5 +72,21 @@ document.querySelectorAll(".edit-btn").forEach((btn) => {
 document.querySelectorAll(".complete-btn").forEach((btn) => {
   btn.addEventListener("click", toggleComplete);
 });
-
+function deleteTodo() {
+  const id = this.parentElement.parentElement.getAttribute("data-id");
+  todos = todos.filter((todo) => todo.id !== Number(id));
+  localStorage.setItem("todos", JSON.stringify(todos));
+  renderTodos();
+}
+function editTodo() {
+  const id = this.parentElement.parentElement.getAttribute("data-id");
+  const todoToEdit = todos.find((todo) => todo.id === Number(id));
+  const inputField = document.querySelector("#todo-input");
+  inputField.value = todoToEdit.title;
+  document.querySelector("#submit-btn").onclick = function () {
+    todoToEdit.title = inputField.value;
+    localStorage.setItem("todos", JSON.stringify(todos));
+    renderTodos();
+  };
+}
 addTodo();
