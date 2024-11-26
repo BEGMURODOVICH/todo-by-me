@@ -17,7 +17,7 @@
     margin-bottom: 200px;
     .header-content {
       background-image: url(/img/day.webp);
-      background-position: 0px;
+      background-position: center;
       position: fixed;
       z-index: 101;
       top: 0;
@@ -84,7 +84,7 @@
     }
   }
   footer {
-    position: fixed;
+    // position: fixed;
     z-index: 100;
     bottom: 0;
     right: 0;
@@ -102,12 +102,11 @@
       }
       padding: 70px 0 10px 0;
       display: flex;
-      gap: 20px;
       justify-content: space-between;
       .sm {
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 15px;
         img {
           width: 50px;
         }
