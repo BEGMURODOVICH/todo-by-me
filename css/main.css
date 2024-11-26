@@ -7,12 +7,12 @@
   font-family: Russo One;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 360px) {
   .container {
-    max-width: 480px;
+    max-width: 360px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 35px;
+    padding: 0 20px;
   }
   header {
     margin-bottom: 200px;
@@ -91,10 +91,10 @@
     background-image: url(/img/footer.avif);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 0px -45px;
+    background-position: 0px;
   }
   footer .footer-content {
-    padding: 70px 0 10px 0;
+    padding: 70px 0 0 0;
     display: flex;
     justify-content: space-between;
   }
@@ -106,7 +106,7 @@
   footer .footer-content .sm {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 5px;
   }
   footer .footer-content .sm img {
     width: 50px;
