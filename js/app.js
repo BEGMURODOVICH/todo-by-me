@@ -43,7 +43,7 @@ function renderTodos() {
       <p>${todo.title}</p>
       <div class="action">
         <img class="edit-btn" src="img/edit.svg" alt="Edit" />
-        <div class="complete-btn chexbox"></div>
+        <button class="complete-btn"></button>
         <img class="delete-btn" src="img/delet.svg" alt="Delete" />
       </div>
     `;
@@ -80,14 +80,20 @@ function editTodo() {
 
 function toggleComplete() {
   const id = this.parentElement.parentElement.getAttribute("data-id");
+
   todos = todos.map((todo) => {
     if (todo && todo.id === Number(id)) {
       todo.isCompleted = !todo.isCompleted;
+
+      const card = this.closest("li");
+      if (card) {
+        card.classList.toggle("completeTodo", todo.isCompleted);
+      }
     }
     return todo;
   });
+
   localStorage.setItem("todos", JSON.stringify(todos));
-  renderTodos();
 }
 
 let todos = (JSON.parse(localStorage.getItem("todos")) || []).filter(
@@ -112,5 +118,7 @@ function addTodo() {
 
   todos.push(newTodo);
   todoInput.value = "";
+  localStorage.setItem("todos", JSON.stringify(todos));
+
   renderTodos();
 }
