@@ -13,7 +13,7 @@ ul {
 a {
   text-decoration: none;
 }
-.container { 
+.container {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
@@ -95,6 +95,31 @@ main {
     .note-content {
       display: grid;
       gap: 15px;
+      .action {
+        .check {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          width: 20px;
+          height: 20px;
+          border: 3px solid #20eeb0;
+          border-radius: 10px;
+          position: relative;
+        }
+        .check:checked {
+          background-color: #20eeb0;
+          border-color: #20eeb0;
+        }
+        .check:checked::after {
+          content: "✔️";
+          color: white;
+          position: absolute;
+          top: 35%;
+          left: 45%;
+          transform: translate(-50%, -50%);
+          font-size: 14px;
+        }
+      }
       .completeTodo {
         display: flex;
         justify-content: center;
